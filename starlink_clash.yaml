@@ -1,0 +1,1211 @@
+# 星链云 Clash/Mihomo 配置
+# 自动生成时间: 2026-05-27 13:34:14
+
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+
+proxies:
+  - name: "[香港] Hong Kong 1-vless"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 35805
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "0PCA4MyFiu5EZb0SM_jjR0kmvVamQdW7o5b2xpHroVc"
+      short-id: "abcd1234"
+
+  - name: "[香港] Hong Kong 2-vless"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 35805
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "0PCA4MyFiu5EZb0SM_jjR0kmvVamQdW7o5b2xpHroVc"
+      short-id: "abcd1234"
+
+  - name: "[香港] Hong Kong 3-vless"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 37426
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "qPyvpsS5fIMSlf9_2P6ZbkO7TXusjYhhC2J4JwC0XUY"
+      short-id: "99a1bdea"
+
+  - name: "[香港] Hong Kong 4-vless"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 37426
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "qPyvpsS5fIMSlf9_2P6ZbkO7TXusjYhhC2J4JwC0XUY"
+      short-id: "99a1bdea"
+
+  - name: "[香港] Hong Kong 5-vless"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 23452
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "Nd0Nf0znvNYWrBK45R7kDJ6VkaqjGI8rCorvkXQnJH8"
+      short-id: "8d2cdb6a"
+
+  - name: "[香港] Hong Kong 6-vless"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 23452
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "Nd0Nf0znvNYWrBK45R7kDJ6VkaqjGI8rCorvkXQnJH8"
+      short-id: "8d2cdb6a"
+
+  - name: "（Windows/Android/macOS）"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 23452
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "Nd0Nf0znvNYWrBK45R7kDJ6VkaqjGI8rCorvkXQnJH8"
+      short-id: "8d2cdb6a"
+
+  - name: "显示无法链接到API，所有主机均不可用"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 23452
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "Nd0Nf0znvNYWrBK45R7kDJ6VkaqjGI8rCorvkXQnJH8"
+      short-id: "8d2cdb6a"
+
+  - name: "[澳门] Macao 1-vless"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 20076
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "ulnu_zfySVMQpcp1kec0S-7CTfkf8ouVtubW4-QNZAk"
+      short-id: "2958c716"
+
+  - name: "[澳门] Macao 2-vless"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 20076
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "ulnu_zfySVMQpcp1kec0S-7CTfkf8ouVtubW4-QNZAk"
+      short-id: "2958c716"
+
+  - name: "[台湾] Taiwan 1-vless"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 35331
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "rmulqYtggx-gV8FezAjwaNZ2ZK4kbthOwwve1cOpPB4"
+      short-id: "4286f0c6"
+
+  - name: "[台湾] Taiwan 2-vless"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 35331
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "rmulqYtggx-gV8FezAjwaNZ2ZK4kbthOwwve1cOpPB4"
+      short-id: "4286f0c6"
+
+  - name: "[日本] Japan 1-vless"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 46095
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "1dtfpm9DmiBI0b6lgO7OfU4GajdookZ-pOXclQh-Gi4"
+      short-id: "c81d0072"
+
+  - name: "[日本] Japan 2-vless"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 46095
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "1dtfpm9DmiBI0b6lgO7OfU4GajdookZ-pOXclQh-Gi4"
+      short-id: "c81d0072"
+
+  - name: "[日本] Japan 3-vless"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 36779
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "speedtest.net"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "l4bUB-Jr6F8ipcpvwHTpRsDI2CU5KpGvhaHrCrwLhFk"
+      short-id: "d67aa4cd"
+
+  - name: "[日本] Japan 4-vless"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 36779
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "speedtest.net"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "l4bUB-Jr6F8ipcpvwHTpRsDI2CU5KpGvhaHrCrwLhFk"
+      short-id: "d67aa4cd"
+
+  - name: "[日本] Japan 5-vless"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 45021
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "speedtest.net"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "6Y-9CUlhWGXWgk1BDhmcpFxY3t8VjquHm7gAQNevkic"
+      short-id: "ef2efcfb"
+
+  - name: "[日本] Japan 6-vless"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 45021
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "speedtest.net"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "6Y-9CUlhWGXWgk1BDhmcpFxY3t8VjquHm7gAQNevkic"
+      short-id: "ef2efcfb"
+
+  - name: "[新加坡] Singapore 1-vless"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 47718
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "Nr31ygoFfwFlEBaAL80C0EHh3-wZ-N8NKVu9t9K39F8"
+      short-id: "6cac779d"
+
+  - name: "[新加坡] Singapore 2-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 47718
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "Nr31ygoFfwFlEBaAL80C0EHh3-wZ-N8NKVu9t9K39F8"
+      short-id: "6cac779d"
+
+  - name: "[新加坡] Singapore 3-vless"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 14141
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "Wn66VBGz6yJkMt1-uM3nNnZavNqrd0-8m8ayQjst-3o"
+      short-id: "855d412f"
+
+  - name: "[新加坡] Singapore 4-vless"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 14141
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "Wn66VBGz6yJkMt1-uM3nNnZavNqrd0-8m8ayQjst-3o"
+      short-id: "855d412f"
+
+  - name: "[新加坡] Singapore 5-vless"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 19962
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "R7LHFKHwE4EPiw2pJkh4TCyYt0SEJ-G-_5PspQr75w8"
+      short-id: "242d201a"
+
+  - name: "[新加坡] Singapore 6-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 19962
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "R7LHFKHwE4EPiw2pJkh4TCyYt0SEJ-G-_5PspQr75w8"
+      short-id: "242d201a"
+
+  - name: "[美国] United States 1-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 14060
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "gS8WB0GCRpqRsHBeO--LTVQVoIRLBp8CNfF332bbngk"
+      short-id: "e6b2be45"
+
+  - name: "[美国] United States 2-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 14060
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "gS8WB0GCRpqRsHBeO--LTVQVoIRLBp8CNfF332bbngk"
+      short-id: "e6b2be45"
+
+  - name: "[美国] United States 3-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 58651
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "RXW_UHAYqV8sKuUu0U_de4Pg-lIO4HD5OzEKg2vDjBc"
+      short-id: "f9f421e4"
+
+  - name: "[美国] United States 4-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 58651
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "RXW_UHAYqV8sKuUu0U_de4Pg-lIO4HD5OzEKg2vDjBc"
+      short-id: "f9f421e4"
+
+  - name: "TG.频道@xlcloud"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 16824
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "2_hegMRSIdmBuuXnsTjbsx7oDF70jp2Qo6CrgXsQdSw"
+      short-id: "c75f7809"
+
+  - name: "[美国] United States 5-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 39830
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "Mog-5LvXxQDqTF8oyfdcFKKInw1LnR-dXFePm3g54n4"
+      short-id: "972a75dc"
+
+  - name: "[美国] United States 6-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 39830
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "Mog-5LvXxQDqTF8oyfdcFKKInw1LnR-dXFePm3g54n4"
+      short-id: "972a75dc"
+
+  - name: "[美国] United States 7-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 57416
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "LFQHGvV18j8mJUU1UjJ9hBceeXl_z8snpSkeBcdpGTA"
+      short-id: "85fc7982"
+
+  - name: "[美国] United States 8-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 57416
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "LFQHGvV18j8mJUU1UjJ9hBceeXl_z8snpSkeBcdpGTA"
+      short-id: "85fc7982"
+
+  - name: "[英国] United Kiongdom 1-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 53996
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "kiQHI0B-MZTMvX_eQTXkcWmiLUrvjsLZnBb16yPtzWs"
+      short-id: "c39e32d3"
+
+  - name: "[英国] United Kiongdom 2-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 53996
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "kiQHI0B-MZTMvX_eQTXkcWmiLUrvjsLZnBb16yPtzWs"
+      short-id: "c39e32d3"
+
+  - name: "[德国] Deutschland 1-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 11839
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "kDPIVTd7UgocwDC6BythGyWAWnqyvF355vAPRTUCI3I"
+      short-id: "ac1adbb7"
+
+  - name: "[德国] Deutschland 2-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 11839
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "kDPIVTd7UgocwDC6BythGyWAWnqyvF355vAPRTUCI3I"
+      short-id: "ac1adbb7"
+
+  - name: "[法国] France 1-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 22689
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "PNz12Yk8_gPO4YFtAfFWQy8rzWDzgSol60MJWujdknE"
+      short-id: "42792e9b"
+
+  - name: "[法国] France 2-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 22689
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "PNz12Yk8_gPO4YFtAfFWQy8rzWDzgSol60MJWujdknE"
+      short-id: "42792e9b"
+
+  - name: "[马来西亚] Malaysia 1-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 10577
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "QwfuMOIgX6H4q8RZAk-1Kks49608MgkpyE6kIdhJsSA"
+      short-id: "8f4f4310"
+
+  - name: "[马来西亚] Malaysia 2-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 10577
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "QwfuMOIgX6H4q8RZAk-1Kks49608MgkpyE6kIdhJsSA"
+      short-id: "8f4f4310"
+
+  - name: "[柬埔寨] Cambodia 1-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 46861
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "sSDqchQZu6NHNVzCJzYkI4FrVFvhET9cR66WbkKRuyE"
+      short-id: "bd9dbf46"
+
+  - name: "[柬埔寨] Cambodia 2-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 46861
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "sSDqchQZu6NHNVzCJzYkI4FrVFvhET9cR66WbkKRuyE"
+      short-id: "bd9dbf46"
+
+  - name: "[越南] Vietnam 1-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 34489
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "U-5gfWmI7L6hQigPld6eqTjjEfQDCML1jASTEXZKeC8"
+      short-id: "d6dc55f2"
+
+  - name: "[越南] Vietnam 2-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 34489
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "U-5gfWmI7L6hQigPld6eqTjjEfQDCML1jASTEXZKeC8"
+      short-id: "d6dc55f2"
+
+  - name: "[越南] Vietnam 3-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 29191
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "SZXOxS_bGDN4vS5WaL-zTNbawfztNsfx6hWRh9Y8WU0"
+      short-id: "0e7d70c1"
+
+  - name: "[越南] Vietnam 4-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 29191
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "SZXOxS_bGDN4vS5WaL-zTNbawfztNsfx6hWRh9Y8WU0"
+      short-id: "0e7d70c1"
+
+  - name: "[印度] India 1-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 27357
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "OgkTtM2ryTsPuPiBAqhtzbw8OB48qVp9pV0cqRqmjh0"
+      short-id: "f936b728"
+
+  - name: "[印度] India 2-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 27357
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "OgkTtM2ryTsPuPiBAqhtzbw8OB48qVp9pV0cqRqmjh0"
+      short-id: "f936b728"
+
+  - name: "[老挝] laos 1-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 27993
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "vja4zs-WhCGH7rcKgvVewicsQP3kdiO6RrAC2uZP_zA"
+      short-id: "0f35eb8d"
+
+  - name: "[老挝] laos 2-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 27993
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "vja4zs-WhCGH7rcKgvVewicsQP3kdiO6RrAC2uZP_zA"
+      short-id: "0f35eb8d"
+
+  - name: "[泰国] Thailand 1-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 26042
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "4HXi1W3TCFxm8R8Tqskgi1dCXVs0_0GgG61fNfJ1MRc"
+      short-id: "6dc7f845"
+
+  - name: "[泰国] Thailand 2-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 26042
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "4HXi1W3TCFxm8R8Tqskgi1dCXVs0_0GgG61fNfJ1MRc"
+      short-id: "6dc7f845"
+
+  - name: "[孟加拉] Bangladesh 1-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 50789
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "qIz0e503tGblCWOzbyEinGdcG7KmVo22PRCTopdYyD4"
+      short-id: "384273a1"
+
+  - name: "[孟加拉] Bangladesh 2-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 50789
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "qIz0e503tGblCWOzbyEinGdcG7KmVo22PRCTopdYyD4"
+      short-id: "384273a1"
+
+  - name: "[巴基斯坦] Pakistan 1-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 51504
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "dTn5-q8qJlF7HwLpeKoN2sOoGLijpOq3eT0oRnF-s0c"
+      short-id: "521a651e"
+
+  - name: "[巴基斯坦] Pakistan 2-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 51504
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "dTn5-q8qJlF7HwLpeKoN2sOoGLijpOq3eT0oRnF-s0c"
+      short-id: "521a651e"
+
+  - name: "[韩国] South Korea 1-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 12361
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "lcopzNqnfBdoBukMP5gzIyvCHob9YgkO3Cod4P0bvxI"
+      short-id: "7b790387"
+
+  - name: "[韩国] South Korea 2-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 12361
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "lcopzNqnfBdoBukMP5gzIyvCHob9YgkO3Cod4P0bvxI"
+      short-id: "7b790387"
+
+  - name: "[菲律宾] Philippines 1-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 16309
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "MVlEfdqqheHbAd5d3_03HvhZICZZ6cBxNWb5Zqjw0jQ"
+      short-id: "a2f6f4f6"
+
+  - name: "[菲律宾] Philippines 2-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 16309
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "MVlEfdqqheHbAd5d3_03HvhZICZZ6cBxNWb5Zqjw0jQ"
+      short-id: "a2f6f4f6"
+
+  - name: "[印度尼西亚] Indonesia 1-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 32730
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "vOxYxdcDnmRb-55PSGY60Tkx1DTLayurrtJd4Bqo0m4"
+      short-id: "32c3aba3"
+
+  - name: "[印度尼西亚] Indonesia 2-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 32730
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "vOxYxdcDnmRb-55PSGY60Tkx1DTLayurrtJd4Bqo0m4"
+      short-id: "32c3aba3"
+
+  - name: "[土耳其] Turkey 1-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 20068
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "qaofDKq3s7SXYa2jjqURPcCitH0dEM7r7_lzrtS0BjY"
+      short-id: "da2a6ef0"
+
+  - name: "[土耳其] Turkey 2-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 20068
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "qaofDKq3s7SXYa2jjqURPcCitH0dEM7r7_lzrtS0BjY"
+      short-id: "da2a6ef0"
+
+  - name: "[俄罗斯] Russia 1-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 30231
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "3bJVOo-n9xwS3f83b4-yPAqrFJWQSqdhaXwkiQN4CRQ"
+      short-id: "3bb840e8"
+
+  - name: "[俄罗斯] Russia 2-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 30231
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "3bJVOo-n9xwS3f83b4-yPAqrFJWQSqdhaXwkiQN4CRQ"
+      short-id: "3bb840e8"
+
+  - name: "[阿根廷] Argentina 1-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 55441
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "6IGqB5IQxlyhN6j4kyM3o2JYUSFHWPPPagq2T5loNUw"
+      short-id: "63212871"
+
+  - name: "[阿根廷] Argentina 2-vlsee"
+    type: vless
+    server: xlcc.xn--gmq58r4wd.cn
+    port: 55441
+    uuid: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    udp: true
+    tls: true
+    servername: "v1-dy.ixigua.com"
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    reality:
+      enabled: true
+      public-key: "6IGqB5IQxlyhN6j4kyM3o2JYUSFHWPPPagq2T5loNUw"
+      short-id: "63212871"
+
+  - name: "台湾直连 x0.5"
+    type: hysteria2
+    server: tw.kalocci.com
+    port: 443
+    password: "7f30645a-84d3-40fa-bab2-95d9f22bf7a5"
+    sni: "v1-dy.ixigua.com"
+    skip-cert-verify: true
+    client-fingerprint: chrome
+
+proxy-groups:
+  - name: "🚀 节点选择"
+    type: select
+    proxies:
+      - "♻️ 自动选择"
+      - "🎯 全球直连"
+      - "[香港] Hong Kong 1-vless"
+      - "[香港] Hong Kong 2-vless"
+      - "[香港] Hong Kong 3-vless"
+      - "[香港] Hong Kong 4-vless"
+      - "[香港] Hong Kong 5-vless"
+      - "[香港] Hong Kong 6-vless"
+      - "（Windows/Android/macOS）"
+      - "显示无法链接到API，所有主机均不可用"
+      - "[澳门] Macao 1-vless"
+      - "[澳门] Macao 2-vless"
+      - "[台湾] Taiwan 1-vless"
+      - "[台湾] Taiwan 2-vless"
+      - "[日本] Japan 1-vless"
+      - "[日本] Japan 2-vless"
+      - "[日本] Japan 3-vless"
+      - "[日本] Japan 4-vless"
+      - "[日本] Japan 5-vless"
+      - "[日本] Japan 6-vless"
+      - "[新加坡] Singapore 1-vless"
+      - "[新加坡] Singapore 2-vlsee"
+      - "[新加坡] Singapore 3-vless"
+      - "[新加坡] Singapore 4-vless"
+      - "[新加坡] Singapore 5-vless"
+      - "[新加坡] Singapore 6-vlsee"
+      - "[美国] United States 1-vlsee"
+      - "[美国] United States 2-vlsee"
+      - "[美国] United States 3-vlsee"
+      - "[美国] United States 4-vlsee"
+      - "TG.频道@xlcloud"
+      - "[美国] United States 5-vlsee"
+      - "[美国] United States 6-vlsee"
+      - "[美国] United States 7-vlsee"
+      - "[美国] United States 8-vlsee"
+      - "[英国] United Kiongdom 1-vlsee"
+      - "[英国] United Kiongdom 2-vlsee"
+      - "[德国] Deutschland 1-vlsee"
+      - "[德国] Deutschland 2-vlsee"
+      - "[法国] France 1-vlsee"
+      - "[法国] France 2-vlsee"
+      - "[马来西亚] Malaysia 1-vlsee"
+      - "[马来西亚] Malaysia 2-vlsee"
+      - "[柬埔寨] Cambodia 1-vlsee"
+      - "[柬埔寨] Cambodia 2-vlsee"
+      - "[越南] Vietnam 1-vlsee"
+      - "[越南] Vietnam 2-vlsee"
+      - "[越南] Vietnam 3-vlsee"
+      - "[越南] Vietnam 4-vlsee"
+      - "[印度] India 1-vlsee"
+      - "[印度] India 2-vlsee"
+      - "[老挝] laos 1-vlsee"
+      - "[老挝] laos 2-vlsee"
+      - "[泰国] Thailand 1-vlsee"
+      - "[泰国] Thailand 2-vlsee"
+      - "[孟加拉] Bangladesh 1-vlsee"
+      - "[孟加拉] Bangladesh 2-vlsee"
+      - "[巴基斯坦] Pakistan 1-vlsee"
+      - "[巴基斯坦] Pakistan 2-vlsee"
+      - "[韩国] South Korea 1-vlsee"
+      - "[韩国] South Korea 2-vlsee"
+      - "[菲律宾] Philippines 1-vlsee"
+      - "[菲律宾] Philippines 2-vlsee"
+      - "[印度尼西亚] Indonesia 1-vlsee"
+      - "[印度尼西亚] Indonesia 2-vlsee"
+      - "[土耳其] Turkey 1-vlsee"
+      - "[土耳其] Turkey 2-vlsee"
+      - "[俄罗斯] Russia 1-vlsee"
+      - "[俄罗斯] Russia 2-vlsee"
+      - "[阿根廷] Argentina 1-vlsee"
+      - "[阿根廷] Argentina 2-vlsee"
+      - "台湾直连 x0.5"
+  - name: "♻️ 自动选择"
+    type: url-test
+    proxies:
+      - "[香港] Hong Kong 1-vless"
+      - "[香港] Hong Kong 2-vless"
+      - "[香港] Hong Kong 3-vless"
+      - "[香港] Hong Kong 4-vless"
+      - "[香港] Hong Kong 5-vless"
+      - "[香港] Hong Kong 6-vless"
+      - "（Windows/Android/macOS）"
+      - "显示无法链接到API，所有主机均不可用"
+      - "[澳门] Macao 1-vless"
+      - "[澳门] Macao 2-vless"
+      - "[台湾] Taiwan 1-vless"
+      - "[台湾] Taiwan 2-vless"
+      - "[日本] Japan 1-vless"
+      - "[日本] Japan 2-vless"
+      - "[日本] Japan 3-vless"
+      - "[日本] Japan 4-vless"
+      - "[日本] Japan 5-vless"
+      - "[日本] Japan 6-vless"
+      - "[新加坡] Singapore 1-vless"
+      - "[新加坡] Singapore 2-vlsee"
+      - "[新加坡] Singapore 3-vless"
+      - "[新加坡] Singapore 4-vless"
+      - "[新加坡] Singapore 5-vless"
+      - "[新加坡] Singapore 6-vlsee"
+      - "[美国] United States 1-vlsee"
+      - "[美国] United States 2-vlsee"
+      - "[美国] United States 3-vlsee"
+      - "[美国] United States 4-vlsee"
+      - "TG.频道@xlcloud"
+      - "[美国] United States 5-vlsee"
+      - "[美国] United States 6-vlsee"
+      - "[美国] United States 7-vlsee"
+      - "[美国] United States 8-vlsee"
+      - "[英国] United Kiongdom 1-vlsee"
+      - "[英国] United Kiongdom 2-vlsee"
+      - "[德国] Deutschland 1-vlsee"
+      - "[德国] Deutschland 2-vlsee"
+      - "[法国] France 1-vlsee"
+      - "[法国] France 2-vlsee"
+      - "[马来西亚] Malaysia 1-vlsee"
+      - "[马来西亚] Malaysia 2-vlsee"
+      - "[柬埔寨] Cambodia 1-vlsee"
+      - "[柬埔寨] Cambodia 2-vlsee"
+      - "[越南] Vietnam 1-vlsee"
+      - "[越南] Vietnam 2-vlsee"
+      - "[越南] Vietnam 3-vlsee"
+      - "[越南] Vietnam 4-vlsee"
+      - "[印度] India 1-vlsee"
+      - "[印度] India 2-vlsee"
+      - "[老挝] laos 1-vlsee"
+      - "[老挝] laos 2-vlsee"
+      - "[泰国] Thailand 1-vlsee"
+      - "[泰国] Thailand 2-vlsee"
+      - "[孟加拉] Bangladesh 1-vlsee"
+      - "[孟加拉] Bangladesh 2-vlsee"
+      - "[巴基斯坦] Pakistan 1-vlsee"
+      - "[巴基斯坦] Pakistan 2-vlsee"
+      - "[韩国] South Korea 1-vlsee"
+      - "[韩国] South Korea 2-vlsee"
+      - "[菲律宾] Philippines 1-vlsee"
+      - "[菲律宾] Philippines 2-vlsee"
+      - "[印度尼西亚] Indonesia 1-vlsee"
+      - "[印度尼西亚] Indonesia 2-vlsee"
+      - "[土耳其] Turkey 1-vlsee"
+      - "[土耳其] Turkey 2-vlsee"
+      - "[俄罗斯] Russia 1-vlsee"
+      - "[俄罗斯] Russia 2-vlsee"
+      - "[阿根廷] Argentina 1-vlsee"
+      - "[阿根廷] Argentina 2-vlsee"
+      - "台湾直连 x0.5"
+    url: "http://cp.cloudflare.com/generate_204"
+    interval: 600
+  - name: "🎯 全球直连"
+    type: direct
+
+rules:
+  - GEOIP,LAN,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🚀 节点选择
