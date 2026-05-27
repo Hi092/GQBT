@@ -1,0 +1,4 @@
+update.py
+server.py
+*.log
+cron.log
