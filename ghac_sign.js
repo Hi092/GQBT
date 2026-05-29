@@ -227,14 +227,13 @@ if (!token || !customerCode) {
   return;
 }
 
-// 暂时跳过防重复锁（调试用）
-// var lastRun = Store.read("ghac_last_run_date") || "";
-// if (lastRun === todayStr()) {
-//   clearTimeout(FORCE_TIMEOUT);
-//   console.log("[GHAC] 今日已执行，跳过");
-//   $done();
-//   return;
-// }
+var lastRun = Store.read("ghac_last_run_date") || "";
+if (lastRun === todayStr()) {
+  clearTimeout(FORCE_TIMEOUT);
+  console.log("[GHAC] 今日已执行，跳过");
+  $done();
+  return;
+}
 
 // ========== 结果记录 ==========
 var results = {
