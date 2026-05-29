@@ -192,11 +192,33 @@ function parseResp(resp) {
   }
 }
 
+// ========== 存储兼容层 ==========
+var Store = {
+  read: function(key) {
+    if (typeof $persistentStore !== "undefined" && $persistentStore && $persistentStore.read) {
+      return $persistentStore.read(key);
+    }
+    if (typeof $prefs !== "undefined" && $prefs && $prefs.valueForKey) {
+      return $prefs.valueForKey(key);
+    }
+    return null;
+  },
+  write: function(val, key) {
+    if (typeof $persistentStore !== "undefined" && $persistentStore && $persistentStore.write) {
+      return $persistentStore.write(val, key);
+    }
+    if (typeof $prefs !== "undefined" && $prefs && $prefs.setValueForKey) {
+      return $prefs.setValueForKey(val, key);
+    }
+    return false;
+  }
+};
+
 // ========== 读取凭据 ==========
-var token = $persistentStore.read("ghac_x_access_token") || "";
-var customerCode = $persistentStore.read("ghac_customer_code") || "";
-var deviceToken = $persistentStore.read("ghac_device_token") || "";
-var cookie = $persistentStore.read("ghac_cookie") || "";
+var token = Store.read("ghac_x_access_token") || "";
+var customerCode = Store.read("ghac_customer_code") || "";
+var deviceToken = Store.read("ghac_device_token") || "";
+var cookie = Store.read("ghac_cookie") || "";
 
 if (!token || !customerCode) {
   clearTimeout(FORCE_TIMEOUT);
@@ -205,7 +227,7 @@ if (!token || !customerCode) {
   return;
 }
 
-var lastRun = $persistentStore.read("ghac_last_run_date") || "";
+var lastRun = Store.read("ghac_last_run_date") || "";
 if (lastRun === todayStr()) {
   clearTimeout(FORCE_TIMEOUT);
   console.log("[GHAC] 今日已执行，跳过");
@@ -591,7 +613,7 @@ step1_sign()
     });
   })
   .then(function() {
-    $persistentStore.write(todayStr(), "ghac_last_run_date");
+    Store.write(todayStr(), "ghac_last_run_date");
 
     var signText = results.signSkipped ? "已签到（跳过）" : (results.signed ? "✅ 签到成功" : "❌ 签到失败");
     var taskText = "浏览 " + results.browse + "/" + BROWSE_COUNT +
