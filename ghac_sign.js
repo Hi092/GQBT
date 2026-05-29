@@ -472,11 +472,17 @@ function step4_article() {
   var title = ARTICLE_TITLES[dayIdx];
   var content = ARTICLE_CONTENTS[dayIdx];
 
-  console.log("[GHAC] 上传图片1...");
+  console.log("[GHAC] 上传图片1, 数据长度: " + img1.length);
   return uploadImage(img1).then(function(resp1) {
+    if (!resp1 || !resp1.body) {
+      console.log("[GHAC] 上传1无响应: " + JSON.stringify(resp1));
+      results.errors.push("图片1上传无响应");
+      return Promise.reject("图片1上传无响应");
+    }
     var data1 = parseResp(resp1);
+    console.log("[GHAC] 上传1响应码: " + resp1.statusCode + " body前300: " + (resp1.body || "").substring(0, 300));
     if (!data1 || data1.code !== 200) {
-      results.errors.push("图片1上传失败");
+      results.errors.push("图片1上传失败: " + (data1 ? data1.message : "解析失败"));
       return Promise.reject("图片1上传失败");
     }
     var imgId1 = data1.data.id;
@@ -510,8 +516,9 @@ function step4_article() {
       }
     });
   }).catch(function(err) {
-    results.errors.push("发文异常: " + err);
-    console.log("[GHAC] 发文异常: " + err);
+    var errDetail = typeof err === "string" ? err : (err.message || JSON.stringify(err));
+    results.errors.push("发文异常: " + errDetail);
+    console.log("[GHAC] 发文异常: " + errDetail);
   });
 }
 
