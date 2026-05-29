@@ -347,7 +347,7 @@ function uploadImage(base64Data) {
       url: UPLOAD_URL,
       method: "POST",
       headers: h,
-      body: JSON.stringify({ eid: "", file: "jpg," + base64Data })
+      body: JSON.stringify({ eid: "", file: "jpg," + base64Data, ftype: "1008" })
     }).then(
       function(resp) { resolve(resp); },
       function(err) { reject(err); }
