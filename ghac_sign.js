@@ -339,7 +339,7 @@ function postComment(circleId, content) {
 
 // ========== 图片上传 ==========
 
-function uploadImage(base64Data) {
+function uploadImage(base64Data, ftype) {
   var h = buildHeaders(false);
   h["Content-Type"] = "application/json";
   return new Promise(function(resolve, reject) {
@@ -347,7 +347,7 @@ function uploadImage(base64Data) {
       url: UPLOAD_URL,
       method: "POST",
       headers: h,
-      body: JSON.stringify({ eid: "", file: "jpg," + base64Data, ftype: "1008" })
+      body: JSON.stringify({ eid: "", file: "jpg," + base64Data, ftype: ftype || "1008" })
     }).then(
       function(resp) { resolve(resp); },
       function(err) { reject(err); }
@@ -357,30 +357,30 @@ function uploadImage(base64Data) {
 
 // ========== 文章发布 ==========
 
-function publishArticle(imgId1, imgUrl1, imgId2, imgUrl2, title, content) {
+function publishArticleFull(passageImgId, passageImgUrl, coverImgId, coverImgUrl, thumbImgId, title, content) {
   console.log("[GHAC] 发布文章: " + title);
   var seriesId = SERIES_IDS[getDayOfYear() % SERIES_IDS.length];
   return request({
     url: DISC_BASE + "/dis-article-content/saveOrUpdateArticle",
     method: "POST", headers: buildHeaders(false),
     body: JSON.stringify({
-      thumbnailImage: imgId1,
-      circleContentPic: imgId2,
+      thumbnailImage: thumbImgId,
+      circleContentPic: passageImgId,
       articleTitle: title,
       modelType: 0,
       circleContentText: content,
       articleContentFront: content,
       seriesId: seriesId,
-      coverPicPath: imgUrl1,
+      coverPicPath: coverImgUrl,
       topicArray: [],
       customerCode: customerCode,
       themeIds: "",
-      articlePic: imgId1,
+      articlePic: coverImgId,
       inviteUserData: [],
       passageList: [{
         passageContents: [
           { passageText: content, isAllowDelete: false, type: 0, topics: [], passageHeight: 100, inviteUserData: [] },
-          { passageImagePath: imgUrl2, isAllowDelete: false, type: 1, topics: [], passageHeight: 0, passageImageID: imgId2, inviteUserData: [] }
+          { passageImagePath: passageImgUrl, isAllowDelete: false, type: 1, topics: [], passageHeight: 0, passageImageID: passageImgId, inviteUserData: [] }
         ],
         headerViewHeight: 0
       }]
@@ -471,7 +471,7 @@ function step3_comment(posts) {
   });
 }
 
-// 4. 发文任务（上传2张图片 + 发布文章）
+// 4. 发文任务（上传3张图片 + 发布文章）
 function step4_article() {
   var dayIdx = getDayOfYear() % 10;
   var imgIdx1 = dayIdx * 2;
@@ -481,49 +481,60 @@ function step4_article() {
   var title = ARTICLE_TITLES[dayIdx];
   var content = ARTICLE_CONTENTS[dayIdx];
 
-  console.log("[GHAC] 上传图片1, 数据长度: " + img1.length);
-  return uploadImage(img1).then(function(resp1) {
-    if (!resp1 || !resp1.body) {
-      console.log("[GHAC] 上传1无响应: " + JSON.stringify(resp1));
-      results.errors.push("图片1上传无响应");
-      return Promise.reject("图片1上传无响应");
-    }
+  // 上传3张图: img1(ftype1008=passage), img2(ftype1022=cover), img1(ftype1026=thumb)
+  console.log("[GHAC] 上传图片1(ftype1008)...");
+  return uploadImage(img1, "1008").then(function(resp1) {
     var data1 = parseResp(resp1);
-    console.log("[GHAC] 上传1响应码: " + resp1.statusCode + " body前300: " + (resp1.body || "").substring(0, 300));
     if (!data1 || data1.code !== 200) {
-      results.errors.push("图片1上传失败: " + (data1 ? data1.message : "解析失败"));
+      console.log("[GHAC] 上传1失败: " + (resp1 ? (resp1.body||"").substring(0,200) : "无响应"));
+      results.errors.push("图片1上传失败: " + (data1 ? data1.message : ""));
       return Promise.reject("图片1上传失败");
     }
-    var imgId1 = data1.data.id;
-    var imgUrl1 = data1.data.url;
-    console.log("[GHAC] 图片1上传成功 ✓");
+    var passageImgId = data1.data.id;
+    var passageImgUrl = data1.data.url;
+    console.log("[GHAC] 图片1上传成功 ✓ id=" + passageImgId);
 
     return delay(1000).then(function() {
-      console.log("[GHAC] 上传图片2...");
-      return uploadImage(img2);
+      console.log("[GHAC] 上传图片2(ftype1022)...");
+      return uploadImage(img2, "1022");
     }).then(function(resp2) {
       var data2 = parseResp(resp2);
       if (!data2 || data2.code !== 200) {
-        results.errors.push("图片2上传失败");
+        console.log("[GHAC] 上传2失败: " + (resp2 ? (resp2.body||"").substring(0,200) : "无响应"));
+        results.errors.push("图片2上传失败: " + (data2 ? data2.message : ""));
         return Promise.reject("图片2上传失败");
       }
-      var imgId2 = data2.data.id;
-      var imgUrl2 = data2.data.url;
-      console.log("[GHAC] 图片2上传成功 ✓");
+      var coverImgId = data2.data.id;
+      var coverImgUrl = data2.data.url;
+      console.log("[GHAC] 图片2上传成功 ✓ id=" + coverImgId);
 
       return delay(1000).then(function() {
-        return publishArticle(imgId1, imgUrl1, imgId2, imgUrl2, title, content);
+        console.log("[GHAC] 上传图片3(ftype1026)...");
+        return uploadImage(img1, "1026");
+      }).then(function(resp3) {
+        var data3 = parseResp(resp3);
+        if (!data3 || data3.code !== 200) {
+          console.log("[GHAC] 上传3失败: " + (resp3 ? (resp3.body||"").substring(0,200) : "无响应"));
+          results.errors.push("图片3上传失败: " + (data3 ? data3.message : ""));
+          return Promise.reject("图片3上传失败");
+        }
+        var thumbImgId = data3.data.id;
+        console.log("[GHAC] 图片3上传成功 ✓ id=" + thumbImgId);
+
+        return delay(1000).then(function() {
+          return publishArticleFull(passageImgId, passageImgUrl, coverImgId, coverImgUrl, thumbImgId, title, content);
+        });
       });
-    }).then(function(respPub) {
-      var dataPub = parseResp(respPub);
-      if (dataPub && dataPub.code === 200) {
-        results.article = true;
-        console.log("[GHAC] 文章发布成功 ✓");
-      } else {
-        results.errors.push("文章发布失败: " + (dataPub ? dataPub.message : "无响应"));
-        console.log("[GHAC] 文章发布失败 ✗");
-      }
     });
+  }).then(function(respPub) {
+    var dataPub = parseResp(respPub);
+    if (dataPub && dataPub.code === 200) {
+      results.article = true;
+      console.log("[GHAC] 文章发布成功 ✓");
+    } else {
+      console.log("[GHAC] 发文失败: " + (respPub ? (respPub.body||"").substring(0,200) : "无响应"));
+      results.errors.push("文章发布失败: " + (dataPub ? dataPub.message : ""));
+    }
   }).catch(function(err) {
     var errDetail = typeof err === "string" ? err : (err.message || JSON.stringify(err));
     results.errors.push("发文异常: " + errDetail);
