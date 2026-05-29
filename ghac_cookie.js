@@ -5,6 +5,28 @@
  * 作者：Hi092
  */
 
+// ========== 存储兼容层 ==========
+var Store = {
+  read: function(key) {
+    if (typeof $persistentStore !== "undefined" && $persistentStore && $persistentStore.read) {
+      return $persistentStore.read(key);
+    }
+    if (typeof $prefs !== "undefined" && $prefs && $prefs.valueForKey) {
+      return $prefs.valueForKey(key);
+    }
+    return null;
+  },
+  write: function(val, key) {
+    if (typeof $persistentStore !== "undefined" && $persistentStore && $persistentStore.write) {
+      return $persistentStore.write(val, key);
+    }
+    if (typeof $prefs !== "undefined" && $prefs && $prefs.setValueForKey) {
+      return $prefs.setValueForKey(val, key);
+    }
+    return false;
+  }
+};
+
 // 防止手动运行时报错
 if (typeof $request === "undefined" || !$request || !$request.url) {
   $done({});
@@ -79,34 +101,34 @@ if (body && body.length > 0) {
 var changed = false;
 var changeLog = [];
 
-var storeToken = $persistentStore.read("ghac_x_access_token") || "";
-var storeCustomer = $persistentStore.read("ghac_customer_code") || "";
-var storeDevice = $persistentStore.read("ghac_device_token") || "";
-var storeCookie = $persistentStore.read("ghac_cookie") || "";
-var storeUA = $persistentStore.read("ghac_user_agent") || "";
+var storeToken = Store.read("ghac_x_access_token") || "";
+var storeCustomer = Store.read("ghac_customer_code") || "";
+var storeDevice = Store.read("ghac_device_token") || "";
+var storeCookie = Store.read("ghac_cookie") || "";
+var storeUA = Store.read("ghac_user_agent") || "";
 
 if (token && token !== storeToken) {
-  $persistentStore.write(token, "ghac_x_access_token");
+  Store.write(token, "ghac_x_access_token");
   changed = true;
   changeLog.push("Token");
 }
 if (customerCode && customerCode !== storeCustomer) {
-  $persistentStore.write(customerCode, "ghac_customer_code");
+  Store.write(customerCode, "ghac_customer_code");
   changed = true;
   changeLog.push("CustomerCode");
 }
 if (deviceToken && deviceToken !== storeDevice) {
-  $persistentStore.write(deviceToken, "ghac_device_token");
+  Store.write(deviceToken, "ghac_device_token");
   changed = true;
   changeLog.push("DeviceToken");
 }
 if (cookie && cookie !== storeCookie) {
-  $persistentStore.write(cookie, "ghac_cookie");
+  Store.write(cookie, "ghac_cookie");
   changed = true;
   changeLog.push("Cookie");
 }
 if (userAgent && userAgent !== storeUA) {
-  $persistentStore.write(userAgent, "ghac_user_agent");
+  Store.write(userAgent, "ghac_user_agent");
   changed = true;
   changeLog.push("UA");
 }
@@ -115,7 +137,7 @@ if (userAgent && userAgent !== storeUA) {
 
 if (changed) {
   var now = formatNow();
-  $persistentStore.write(now, "ghac_credential_updated_at");
+  Store.write(now, "ghac_credential_updated_at");
 
   var detail = "更新项: " + changeLog.join(", ") + "\n" +
     "Token: " + maskToken(token) + "\n" +
