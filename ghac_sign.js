@@ -340,10 +340,18 @@ function postComment(circleId, content) {
 // ========== 图片上传 ==========
 
 function uploadImage(base64Data) {
-  return request({
-    url: UPLOAD_URL,
-    method: "POST", headers: buildHeaders(false),
-    body: JSON.stringify({ eid: "", file: "jpg," + base64Data })
+  var h = buildHeaders(false);
+  h["Content-Type"] = "application/json";
+  return new Promise(function(resolve, reject) {
+    $task.fetch({
+      url: UPLOAD_URL,
+      method: "POST",
+      headers: h,
+      body: JSON.stringify({ eid: "", file: "jpg," + base64Data })
+    }).then(
+      function(resp) { resolve(resp); },
+      function(err) { reject(err); }
+    );
   });
 }
 
